@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohammed Ibrahim's projects - Car battery charger, smart water dispenser, web development services, and electronics projects." />
+  <meta name="keywords"
+    content="Mohammed Ibrahim Projects, Web Development Projects, Electronics Projects, Power Electronics, Embedded Systems" />
+  <title>Projects - Mohammed Ibrahim</title>
+  <link rel="icon" type="image/png"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>" />
+  <link rel="stylesheet" href="./CSS/navigation.css" />
+  <link rel="stylesheet" href="./CSS/projects.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">WEB DEVELOPER PORTFOLIO</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./aboutme.html">ABOUT ME</a></li>
+      <li><a href="./education.html">EDUCATION</a></li>
+      <li><a href="./experience.html">EXPERIENCE</a></li>
+      <li><a href="./Skills and Tools.html">SKILLS</a></li>
+      <li><a href="./certificates.html">CERTIFICATES</a></li>
+      <li><a href="./projects.html" class="active">PROJECTS</a></li>
+      <li><a href="./Contact .html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects-section" id="projects">
+    <div class="section-header text-center">
+      <h2 class="main-title">PROJECTS</h2>
+      <h1 class="section-title">My Projects</h1>
+      <div class="underline mx-auto mb-4"></div>
+      <p class="section-description">
+        A showcase of engineering and development projects that demonstrate
+        my technical skills and practical experience in electronics, embedded systems, and web development.
+      </p>
+    </div>
+    <div class="project-year">2024 - 2025</div>
+
+    <div class="projects-grid">
+      <!-- IC Design Project with Image Slider -->
+      <div class="project-card">
+        <div class="project-visual project-slider">
+          <div class="slider-container">
+            <div class="slider-images">
+              <img src="./vedio/IC DESIGN/3d.PNG" alt="3D PCB View" class="slider-image active" />
+              <img src="./vedio/IC DESIGN/3d 2.PNG" alt="3D PCB View 2" class="slider-image" />
+              <img src="./vedio/IC DESIGN/Matlab.PNG" alt="MATLAB Simulation" class="slider-image" />
+              <img src="./vedio/IC DESIGN/layout on Altium.PNG" alt="PCB Layout on Altium" class="slider-image" />
+              <img src="./vedio/IC DESIGN/Fabrication.PNG" alt="PCB Fabrication" class="slider-image" />
+              <img src="./vedio/IC DESIGN/test.PNG" alt="Circuit Testing" class="slider-image" />
+              <img src="./vedio/IC DESIGN/عملي.jpg" alt="Practical Implementation" class="slider-image" />
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(this, -1)">❮</button>
+            <button class="slider-btn next" onclick="changeSlide(this, 1)">❯</button>
+            <div class="slider-dots"></div>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Op-Amp Difference Amplifier IC Design | 2024</h3>
+          <p class="project-description">
+            Designed and implemented an Op-Amp Difference Amplifier IC-based system from circuit analysis
+            to full PCB fabrication. Includes schematic design, MATLAB simulation, PCB layout,
+            3D visualization, and real-world testing.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">IC Design</span>
+            <span class="project-tag">Analog Circuits</span>
+            <span class="project-tag">PCB Design</span>
+            <span class="project-tag">Altium Designer</span>
+            <span class="project-tag">MATLAB</span>
+          </div>
+          <div class="project-buttons">
+            <a href="./vedio/IC DESIGN/4 Scimatic.pdf" class="project-link" target="_blank">Schematic PDF</a>
+            <a href="./vedio/IC DESIGN/PCB Layout.pdf" class="project-link" target="_blank">PCB Layout</a>
+            <a href="./vedio/IC DESIGN/Project final(تفاصيل المشروع كاملة).pptx" class="project-link" download>Download
+              Presentation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-visual">
+          <img src="./vedio/Car battary.jpg" alt="Power Electronics Circuit" />
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Car Charger (Power Electronics) | 2025</h3>
+          <p class="project-description">
+            Designed a prototype car charger using power electronic circuits.
+            Focused on stable voltage output and real-world application of
+            **Power Electronics**.
+          </p>
+          <div class="project-buttons">
+            <a href="./vedio/Car battery charger.pdf" class="project-link" target="_blank">Car Battery Charger</a>
+            <a href="./vedio/Project Report.pdf" class="project-link" target="_blank">Project Report</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-visual">
+          <img src="./vedio/disponser.jpg" alt="Smart Water Dispenser" />
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Smart Water Dispenser | 2024</h3>
+          <p class="project-description">
+            A mini water cooler with a touchless tap that works using proximity
+            sensors. Practical application of **Automation & Electronics**.
+          </p>
+          <div class="project-buttons">
+            <a href="https://drive.google.com/file/d/16-sykDTHJyLkZ9ftbp_Lh793q-6MV7nu/preview" class="project-link"
+              target="_blank">Watch Demo Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-visual">
+          <img src="./vedio/masam company.jpg" alt="Masam Company Website" />
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Masam Company Website | 2026</h3>
+          <p class="project-description">
+            A professional company website showcasing services and portfolio.
+            Built with modern web technologies focusing on responsive design and user experience.
+          </p>
+          <div class="project-buttons">
+            <a href="https://drive.google.com/file/d/1UfRDRbDksK5RGuoR9ssXAVJsl6JLGDgE/preview" class="project-link"
+              target="_blank">Watch Demo Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="services-section">
+    <div class="section-header text-center">
+      <h2 class="section-title">My Services</h2>
+      <div class="underline mx-auto mb-4"></div>
+      <p class="section-description">
+        Professional services I offer combining web development expertise with electronics engineering knowledge.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Frontend.jpg" alt="Frontend Web Development" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="service-name">Frontend Web Development</h3>
+          <p class="service-description">Building responsive and user-friendly websites using HTML, CSS, JavaScript, and
+            Bootstrap.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Web Design.jpg" alt="Web Design" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3 class="service-name">Web Design</h3>
+          <p class="service-description">Creating clean and modern website layouts with focus on usability and user
+            experience.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Responsive Design.jpg" alt="Responsive Design" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="service-name">Responsive Design</h3>
+          <p class="service-description">Ensuring websites look great and work smoothly across all devices.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Networking Support.jpg" alt="Networking Support" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 class="service-name">Networking Support</h3>
+          <p class="service-description">Knowledge in CCNA fundamentals and network infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Electronics & Embedded Projects.jpg" alt="Electronics & Embedded Projects" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="service-name">Electronics & Embedded Projects</h3>
+          <p class="service-description">Experience with small-scale projects in automation, sensors, and power
+            electronics.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="./vedio/Artificial Intelligence (AI) Projects.jpg" alt="Artificial Intelligence (AI) Projects" />
+        </div>
+        <div class="service-content">
+          <div class="service-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="service-name">Artificial Intelligence (AI) Projects</h3>
+          <p class="service-description">Developing intelligent systems and applications using machine learning, deep
+            learning, and data analysis techniques to solve real-world problems efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="testimonials-section">
+    <h2>TESTIMONIALS</h2>
+    <div class="testimonial-card">
+      <p>
+        "Congratulations Mohamed! You are talented and truly deserve all the
+        best. I'm confident you will always achieve success and excellence."
+      </p>
+      <span class="source">— Eng. Hany Soliman, Web Design Trainer</span>
+    </div>
+    <div class="testimonial-card">
+      <p>
+        "During his training at NTI, Mohamed showed great dedication and
+        problem-solving skills. He was proactive in learning new concepts and
+        successfully applied them in practical projects."
+      </p>
+      <span class="source">— Eng. Omar Samir, National Telecommunication Institute</span>
+    </div>
+    <div class="testimonial-card">
+      <p>
+        "Mohamed demonstrated strong technical knowledge and teamwork during
+        the Telecom Egypt training. His ability to quickly grasp networking
+        concepts like CCNA basics was impressive."
+      </p>
+      <span class="source">— Eng. Mahmoud Gad, Telecom Egypt (WE)</span>
+    </div>
+  </section>
+
+  <hr />
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        Crafted with ❤️ by <strong>Mohammed Ibrahim</strong> — Front-End
+        Developer
+      </p>
+      <p class="footer-text">
+        © 2025 Mohammed Ibrahim. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./JS/navigation.js"></script>
+  <script>
+    // Image Slider for IC Design Project
+    function initSlider(sliderContainer) {
+      const images = sliderContainer.querySelectorAll('.slider-image');
+      const dotsContainer = sliderContainer.querySelector('.slider-dots');
+      let currentSlideIndex = 0;
+
+      // Store current index in the container
+      sliderContainer.dataset.currentIndex = 0;
+
+      // Create dots
+      images.forEach((img, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'slider-dot' + (index === 0 ? ' active' : '');
+        dot.onclick = () => goToSlide(sliderContainer, index);
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function changeSlide(button, direction) {
+      const sliderContainer = button.closest('.slider-container');
+      const images = sliderContainer.querySelectorAll('.slider-image');
+      const dots = sliderContainer.querySelectorAll('.slider-dot');
+
+      // Get current index from container
+      let currentSlideIndex = parseInt(sliderContainer.dataset.currentIndex) || 0;
+
+      // Remove active from current
+      images[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+
+      // Calculate new index
+      currentSlideIndex = currentSlideIndex + direction;
+
+      // Loop around
+      if (currentSlideIndex >= images.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = images.length - 1;
+      }
+
+      // Store new index
+      sliderContainer.dataset.currentIndex = currentSlideIndex;
+
+      // Add active to new
+      images[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+    }
+
+    function goToSlide(sliderContainer, index) {
+      const images = sliderContainer.querySelectorAll('.slider-image');
+      const dots = sliderContainer.querySelectorAll('.slider-dot');
+
+      // Remove active from all
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Store new index
+      sliderContainer.dataset.currentIndex = index;
+
+      // Add active to selected
+      images[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    // Initialize all sliders on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.slider-container').forEach(initSlider);
+    });
+
+    // جعل الصورة الثانية بنفس ارتفاع الصورة الأولى
+    function matchImageHeights() {
+      const firstImage = document.querySelector('.project-card:first-child .project-visual img');
+      const secondImageContainer = document.querySelector('.project-card:last-child .project-visual');
+
+      if (firstImage && secondImageContainer) {
+        firstImage.onload = function () {
+          const firstImageHeight = firstImage.offsetHeight;
+          secondImageContainer.style.height = firstImageHeight + 'px';
+        };
+
+        // في حالة كانت الصورة محملة بالفعل
+        if (firstImage.complete) {
+          const firstImageHeight = firstImage.offsetHeight;
+          secondImageContainer.style.height = firstImageHeight + 'px';
+        }
+      }
+    }
+
+    // تشغيل الدالة عند تحميل الصفحة وعند تغيير حجم النافذة
+    window.addEventListener('load', matchImageHeights);
+    window.addEventListener('resize', matchImageHeights);
+  </script>
+</body>
+
+</html>

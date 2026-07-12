@@ -1,0 +1,265 @@
+/* --- Global Reset and Setup --- */
+:root {
+    --color-primary: #00e0ff;
+    /* Bright Cyan */
+    --color-secondary: #a040ff;
+    /* Bright Purple */
+    --color-dark: #0a0a0a;
+    --color-text: #e0e0e0;
+    --font-sans: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Main Container with Noise Effect (for the grainy texture) --- */
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px 0 0;
+    /* Add a subtle noise background for the texture effect */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(#n)" opacity=".05"/></svg>');
+    background-repeat: repeat;
+}
+
+/* --- Background Gradient & Blur (The glowing effect) --- */
+.background-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Create the large, blurred gradient spots */
+    background: radial-gradient(circle at 10% 50%, rgba(0, 224, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 50%, rgba(160, 64, 255, 0.15) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* --- Navigation styles moved to navigation.css --- */
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 65px 20px 150px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.heading-main {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 224, 255, 0.5);
+}
+
+.heading-sub {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    /* Icon glow effect */
+    text-shadow: 0 0 15px rgba(0, 224, 255, 0.7);
+    transition: transform 0.3s;
+}
+
+.card:hover .icon {
+    transform: scale(1.1);
+}
+
+/* WhatsApp specific styling */
+.fa-whatsapp {
+    color: #25D366 !important;
+    text-shadow: 0 0 15px rgba(37, 211, 102, 0.7) !important;
+}
+
+.card:hover .fa-whatsapp {
+    color: #128C7E !important;
+    text-shadow: 0 0 20px rgba(18, 140, 126, 0.8) !important;
+}
+
+/* Email specific styling */
+.fa-envelope {
+    color: #EA4335 !important;
+    text-shadow: 0 0 15px rgba(234, 67, 53, 0.7) !important;
+}
+
+.card:hover .fa-envelope {
+    color: #D33B2C !important;
+    text-shadow: 0 0 20px rgba(211, 59, 44, 0.8) !important;
+}
+
+/* Location specific styling */
+.fa-map-marker-alt {
+    color: #4285F4 !important;
+    text-shadow: 0 0 15px rgba(66, 133, 244, 0.7) !important;
+}
+
+.card:hover .fa-map-marker-alt {
+    color: #3367D6 !important;
+    text-shadow: 0 0 20px rgba(51, 103, 214, 0.8) !important;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.small-text {
+    font-size: 0.8rem !important;
+}
+
+
+/* --- Footer Section --- */
+.footer {
+    text-align: center;
+    padding: 60px 0 40px;
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.5);
+}
+
+.footer-name {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    background: linear-gradient(45deg, #ffffff, var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(0, 224, 255, 0.3);
+    animation: footerGlow 3s ease-in-out infinite alternate;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+@keyframes footerGlow {
+    from {
+        filter: brightness(1);
+    }
+
+    to {
+        filter: brightness(1.3);
+    }
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 1200px) {
+    .contact-cards {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Navigation styles moved to navigation.css */
+
+    .contact-section {
+        padding: 50px 0 100px;
+    }
+
+    .contact-cards {
+        justify-content: center;
+    }
+
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        padding: 50px 0 30px;
+        margin-top: 60px;
+    }
+
+    .footer-name {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .footer-tagline {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 20px 0 0;
+    }
+
+    .heading-main {
+        font-size: 2.5rem;
+    }
+}

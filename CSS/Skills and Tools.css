@@ -1,0 +1,282 @@
+/* ----------------------------------- */
+/* الإعدادات العامة والخلفية */
+/* ----------------------------------- */
+:root {
+    --main-color: #00ffff;
+    /* لون النيون الأساسي (أزرق سماوي) */
+    --text-color: #e0e0e0;
+    --dark-bg: #101014;
+    /* خلفية داكنة جداً */
+    --secondary-glow: #8a2be2;
+    /* توهج بنفسجي للخلفية */
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    /* يفضل استبدالها بخط عربي مميز */
+    overflow-x: hidden;
+    /* لمنع ظهور شريط التمرير الأفقي */
+}
+
+/* ----------------------------------- */
+/* تأثير التوهج المائي (الخلفية) */
+/* ----------------------------------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 75% 15%, rgba(0, 255, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 25% 85%, rgba(138, 43, 226, 0.15) 0%, transparent 45%);
+    /* البنفسجي */
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+/* Navigation styles moved to navigation.css */
+
+/* Background Text - Hidden, replaced with visible main title */
+.background-text {
+    display: none;
+}
+
+/* Skills Section */
+.skills-section {
+    padding-top: 100px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Title - EXPERTISE */
+.main-title {
+    font-size: 6vw;
+    font-weight: 900;
+    color: rgba(0, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Header Section */
+.section-header {
+    margin-bottom: 4rem;
+}
+
+/* ----------------------------------- */
+/* الأقسام الرئيسية (Skills, Experience, Education) */
+/* ----------------------------------- */
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.underline {
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--main-color), transparent);
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Grid - Same as Experience */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Skill Category Cards - Same Style as Experience Cards */
+.skill-category-card {
+    background: rgba(20, 20, 28, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+}
+
+.skill-category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-category-card:hover::before {
+    left: 100%;
+}
+
+.skill-category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+}
+
+/* Card Icon */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    filter: grayscale(0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-category-card:hover .card-icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Category Title */
+.category-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+/* Skill Badges */
+.skill-badge {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--main-color);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    padding: 0.4rem 0.9rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-badge.primary {
+    background: rgba(0, 255, 255, 0.15);
+    border-color: rgba(0, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.skill-badge:hover {
+    background: var(--main-color);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+
+/* ----------------------------------- */
+/* الخط السفلي والتذييل */
+/* ----------------------------------- */
+.footer-line {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem !important;
+    padding-top: 1.5rem !important;
+}
+
+.footer-line::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.portfolio-year {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------- */
+/* تعديلات الهاتف (Responsive Design) */
+/* ----------------------------------- */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 10vw;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .skill-category-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .category-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-line {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        padding: 0 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}

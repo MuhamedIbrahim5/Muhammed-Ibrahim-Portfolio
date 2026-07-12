@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohammed Ibrahim - Front-End Web Developer & Electronics Engineer. Specializing in HTML, CSS, JavaScript, Bootstrap, and responsive web design." />
+  <meta name="keywords"
+    content="Mohammed Ibrahim, Web Developer, Front-End Developer, HTML, CSS, JavaScript, Bootstrap, Web Design, Electronics Engineer, Portfolio" />
+  <meta name="author" content="Mohammed Ibrahim" />
+  <meta property="og:title" content="Mohammed Ibrahim - Web Developer Portfolio" />
+  <meta property="og:description"
+    content="Creative web design with HTML, CSS, JavaScript & Bootstrap. Building modern, responsive websites." />
+  <meta property="og:type" content="website" />
+  <title>Mohammed Ibrahim - Web Developer Portfolio</title>
+  <link rel="icon" type="image/png"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>" />
+  <link rel="stylesheet" href="./CSS/navigation.css" />
+  <link rel="stylesheet" href="./CSS/index.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">WEB DEVELOPER PORTFOLIO</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html" class="active">HOME</a></li>
+      <li><a href="./aboutme.html">ABOUT ME</a></li>
+      <li><a href="./education.html">EDUCATION</a></li>
+      <li><a href="./experience.html">EXPERIENCE</a></li>
+      <li><a href="./Skills and Tools.html">SKILLS</a></li>
+      <li><a href="./certificates.html">CERTIFICATES</a></li>
+      <li><a href="./projects.html">PROJECTS</a></li>
+      <li><a href="./Contact .html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Image Section - Left -->
+    <div class="image-section">
+      <div class="profile-container">
+        <div class="profile-image">
+          <img width="350px" height="350px" src="./img/صورتي.jpg" alt="Mohammed Ibrahim Profile"
+            style="object-fit: cover; object-position: center 20%;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section - Right -->
+    <div class="content">
+      <div class="greeting">HELLO I'M</div>
+      <h1 class="main-title">Mohammed<br />Ibrahim</h1>
+      <div class="subtitle">Web Designer</div>
+      <div class="tagline">
+        Creative web design | HTML | CSS | JavaScript | Bootstrap
+      </div>
+      <p class="description">
+        Turning ideas into clean, modern websites with responsive design and
+        user-friendly interfaces. Passionate about creating digital
+        experiences that engage and inspire.
+      </p>
+      <a href="https://www.linkedin.com/in/muhammed-ibrahim-517ba3384?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgfCM4dH5Qda%2BT0c1jZXlGQ%3D%3D"
+        class="cta-button">GET IN TOUCH by LinkedIn</a>
+
+      <!-- Skills Section -->
+      <div class="skills-section">
+        <div class="skills-title">Technologies & Tools</div>
+        <div class="skills-icons">
+          <div class="skill-icon vscode-icon" data-skill="VS Code"></div>
+          <div class="skill-icon html-icon" data-skill="HTML5"></div>
+          <div class="skill-icon css-icon" data-skill="CSS3"></div>
+          <div class="skill-icon js-icon" data-skill="JavaScript"></div>
+          <div class="skill-icon bootstrap-icon" data-skill="Bootstrap"></div>
+          <div class="skill-icon photoshop-icon" data-skill="Photoshop"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio Badge -->
+  <div class="portfolio-badge">PORTFOLIO 2024</div>
+
+  <!-- Progress Line -->
+  <div class="progress-line"></div>
+
+  <!-- Particles Background -->
+  <div class="particles" id="particles"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        Created with ❤️ by <strong>Mohammed Ibrahim</strong> — Front-End
+        Developer
+      </p>
+      <p class="footer-text">© 2025 Mohammed Ibrahim. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./JS/navigation.js"></script>
+  <!-- <script src="./JS/index.js"></script> -->
+</body>
+
+</html>
