@@ -39,11 +39,6 @@ build/
 *.mkv
 *.flv
 
-# Personal sensitive documents
-Bacaloruse/ID card.jpeg
-Bacaloruse/شهادة البكالوريوس.jpeg
-Bacaloruse/شهادة درجات البكالوريوس.jpeg
-
 # Backup files
 *.bak
 *.backup
